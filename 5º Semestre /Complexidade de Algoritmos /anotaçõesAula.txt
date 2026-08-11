@@ -1,0 +1,36 @@
+Professor: Leandro
+
+Conteúdo Geral
+
+Notas:
+
+Provavelmente: 2 provas 1 Trabalho
+
+• Crescimento assintótico de funções.
+• Somatórios.
+• Análise de complexidade de algoritmos.
+• Algoritmos iterativos e recursivos.
+• Divisão e conquista.
+• Algoritmos gulosos.
+• Programação Dinâmica.
+• Problemas tratáveis e intratáveis.
+• Classes de problemas: P, NP, NP-Completo e NP-
+Difícil.
+• Aproximações e Heurísticas.
+
+Algoritmo
+
+• Um algoritmo é um conjunto de instruções bem definidas, as quais especificam uma sequência específica de instruções para cada entrada,terminando com uma saída;
+• Um algoritmo resolve um problema quando, para qualquer entrada, produz uma saída correta;
+• O fato de resolver um problema não significa que seja aceitável na prática;
+• Espaço e tempo requeridos são muito importantes na prática.
+
+• Um algoritmo imediato pode estar longe de resolver o problema de forma eficiente;
+
+Máquinas mais potentes?
+
+• O avanço da tecnologia parece ofuscar a importância da complexidade de tempo de um algoritmo;
+• Porém, ocorre o contrário. Com máquinas mais poderosas surgem problemas ainda maiores a serem resolvidos;
+• A complexidade do problema deve ser levada em consideração num projeto;
+• Um problema difícil de resolver computacionalmente pode atrasar a entrega de um projeto.
+
