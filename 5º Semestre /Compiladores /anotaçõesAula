@@ -1,0 +1,134 @@
+Professor: Cristiano
+
+Compiladores
+
+Código em Assembly para máquina virtual JAVA
+
+Assembly se conecta diretamente com a máquina
+
+ADD / MUL / MOV / CMP / JG
+
+          Assembler
+Assembly     ->     LM
+
+site: compiler explorer (https://godbolt.org/)
+
+Processador de x bits (tamanho que uma instrução pode ser executada)
+
+64 bits -> O processador manipula dados de 64 bits por vez
+
+Somar 3 com 2
+Exemplo:
+MOV RAX, 3
+ADD RAX, 2
+
+Acumulador (arquitetura Intel), porque o resultado é colocado com registrado
+
+programa.java --> java.c --> p.class (bytecode)
+
+Linguagem C feito para criar sistemas operacionais, sem ter que reescrever o código do zero, primeiro a ser feito foi o UNIX
+
+OverHead - Em ciência da computação, overhead (ou sobrecarga) significa o consumo extra de recursos de um sistema — como tempo de processamento, memória RAM ou largura de banda de rede — usado apenas para gerenciar e manter uma tarefa a funcionar, sem entregar valor direto ao resultado final.
+
+Java, primeiro executa máquina virtual, depois compila
+
+Haskell (ele ministará uma aula para dar uma melhor noção da linguagem para essa matéria)
+
+-------------------------------------------------------------------------------------------
+
+Dia: 06/ 08/ 2026
+
+Livro base: https://archive.org/details/compiladores-principios-tecnicas-e-ferramentas/page/n5/mode/2up
+
+Construção de um executável
+
+Aula.c
+
+#include <stdio.h>
+#define TAM 10
+
+int main () {
+
+	int i;
+
+	for (i=0; i<TAM; i++) {
+		printf("%d", i);
+	}
+}
+
+$ gcc -save-temps Aula.c
+
+if f () {
+	g();
+}
+
+if g () {
+	...
+}
+
+Em C a função acima não funçiona, porque ela foi feita para verificar em uma única passagem
+
+* Declaração de estrutura de dados não gera código
+* extern int a; Utiliza um protótipo de forma que eu use uma variável de um módulo em outro
+* int printf(const char*, ...);
+
+executar: $./a.out
+
+* $./a.out >> teste.txt
+
+extern FILE *stdin;
+extern FILE *stout;
+extern FILE *stderr;
+
+a-Aula.s (código em Assembly)
+a-Aula.o (conversão exata do assembly para binário)
+Por que não poderia executar .o? Todo código está na função main? Não porque só tem o código gerado para funções que O PROGRAMADOR criou, printf não tem por exemplo, precisa juntar com outros .o
+
+Exemplo: 
+cabeçalhoimc.o
+programa.o
+lib.o
+.i é o que o compilador recebe como entrada
+editor de ligação, nome que liga todos os .o
+
+#include <stdio.h>
+
+int fat(int);
+
+int main() {
+	
+	int x;
+	x = fat(3);
+	return 0;
+
+}
+	
+Não dá problemas de compilação, mas sim de ligação que chamará o fat e ele não existirá
+
+OUTRO EXEMPLO
+
+fat.h
+int fat (int);
+
+fat.c
+
+int fat (int n) {
+	if (n<=1)
+	  return 1;
+
+	return n*fat(n-1);
+}
+
+Aula.c
+
+#include <stdio.h>
+#include "fat.h" #se não tiver incluso não existe, não faz diferença na hora de compilar, mas colocar "" indica para procurar no diretório atual, enquanto <> no diretório padrão
+
+int main() {
+	int x;
+	x = fat(3);
+	printf("%d", x);
+	return 0;
+}
+
+$ gcc Aula.c fat.c #deve ser incluido o fat para executar a leitura
