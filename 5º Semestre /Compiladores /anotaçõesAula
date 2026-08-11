@@ -1,4 +1,4 @@
-Professor: Cristiano
+Professor: Cristiano Vasconcellos
 
 Compiladores
 
@@ -26,15 +26,18 @@ Acumulador (arquitetura Intel), porque o resultado é colocado com registrado
 
 programa.java --> java.c --> p.class (bytecode)
 
-Linguagem C feito para criar sistemas operacionais, sem ter que reescrever o código do zero, primeiro a ser feito foi o UNIX
+Linguagem C feito para criar sistemas operacionais, sem ter que reescrever o código do zero, primeiro a ser 
+feito foi o UNIX
 
-OverHead - Em ciência da computação, overhead (ou sobrecarga) significa o consumo extra de recursos de um sistema — como tempo de processamento, memória RAM ou largura de banda de rede — usado apenas para gerenciar e manter uma tarefa a funcionar, sem entregar valor direto ao resultado final.
+OverHead - Em ciência da computação, overhead (ou sobrecarga) significa o consumo extra de recursos de um 
+sistema — como tempo de processamento, memória RAM ou largura de banda de rede — usado apenas para gerenciar 
+e manter uma tarefa a funcionar, sem entregar valor direto ao resultado final.
 
 Java, primeiro executa máquina virtual, depois compila
 
 Haskell (ele ministará uma aula para dar uma melhor noção da linguagem para essa matéria)
 
--------------------------------------------------------------------------------------------
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Dia: 06/ 08/ 2026
 
@@ -82,7 +85,8 @@ extern FILE *stderr;
 
 a-Aula.s (código em Assembly)
 a-Aula.o (conversão exata do assembly para binário)
-Por que não poderia executar .o? Todo código está na função main? Não porque só tem o código gerado para funções que O PROGRAMADOR criou, printf não tem por exemplo, precisa juntar com outros .o
+Por que não poderia executar .o? Todo código está na função main? Não porque só tem o código gerado para 
+funções que O PROGRAMADOR criou, printf não tem por exemplo, precisa juntar com outros .o
 
 Exemplo: 
 cabeçalhoimc.o
@@ -122,7 +126,8 @@ int fat (int n) {
 Aula.c
 
 #include <stdio.h>
-#include "fat.h" #se não tiver incluso não existe, não faz diferença na hora de compilar, mas colocar "" indica para procurar no diretório atual, enquanto <> no diretório padrão
+#include "fat.h" #se não tiver incluso não existe, não faz diferença na hora de compilar, mas colocar "" 
+indica para procurar no diretório atual, enquanto <> no diretório padrão
 
 int main() {
 	int x;
@@ -132,3 +137,65 @@ int main() {
 }
 
 $ gcc Aula.c fat.c #deve ser incluido o fat para executar a leitura
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Data: 11/ 08/ 2026
+
+		 Organização de memória
+______________________________________		
+Endereço 0	|________Não usado________
+Código		|
+			|
+____________|_________________________
+			|____Dados estáticos______
+			|		Heap
+Dados       |_________________________
+        	|		
+			|		Pilha
+____________|_________________________
+
+Heap e pilha são dinâmicos
+
+int square (int num) {
+	int a;
+	float x = 2.5;
+	a = 10;
+
+	return 0;
+
+}
+
+Estática: variáveis globais, constantes, modificador static em linguagem C, só existe enquanto o programa 
+está rodando
+Dinâmica: 
+	- Heap: permite o programador decidir quando irá alocar e quando liberar (exemplo: malloc em C)
+	- Pilha: LIFO, onde é armazenado o registro de ativação das funções
+
+Registro de ativação: as informações necessárias para execução de uma função/procedimento são gerenciadas 
+utilizando um bloco de memória chamado registro de ativação, podem fazer parte do registro de ativação: 
+parâmetros, endereço de retorno e variáveis locais
+
+ABI (Application Binary Interface): Uma Interface Binária de Aplicativos (ABI) define como as funções que são 
+escritas separadamente e compiladas separadamente podem trabalhar em conjunto. Isso envolve a padronização da 
+representação do tipo de dados, as convenções de registro e a estrutura de funções e convenções de chamada. 
+Um ABI permite que os arquivos de objeto compatíveis com ABI sejam vinculados entre si, independentemente de 
+sua fonte, e permite que o executável resultante seja executado em qualquer sistema que suporte esse ABI. Ele 
+define a geração de linkname a partir de nomes de símbolos C. Ele também define o formato de arquivo de 
+objeto e o formato de depuração, juntamente com a documentação de como o sistema é inicializado. No caso de C+
++, define C++ nome mangling e suporte de manipulação de exceção.
+Fonte: https://downloads.ti.com/docs/esd/SPRUIG8/application-binary-interface-spru187abi.html
+
+ESP: onde a pilha está no momento da execução
+EBP: guarda o valor que está no topo da pilha, e o utilizarei para calcular a posição do n
+SUB: subtração
+ADD: esvazia
+JG: jump greater
+CALL: a função de call ela desloca para aquele ponto e empilha o endereço de retorno
+PUSH: empilhar
+
+Pilha cresce do mais alto para o mais baixo
+
+
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
