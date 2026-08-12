@@ -1,0 +1,341 @@
+Professora: Rebeca Freitas
+
+Engenharia de Software
+
+Primeira parte:
+- Assuntos
+	* Processos de software / Engenharia de requisitos e principios e padrões de projetos
+	
+- Avaliação
+	* Prova 1
+	* Projeto de desenvolvimento*
+	* Apresentação de exercício/Artigo**
+	
+- Livro base
+	Engenharia de software moderna
+
+___________________________________________________________________________________________________________________________________________________________
+
+Segunda parte:
+- Assuntos:
+	* Arquitetura / testes / refatoração / metodologia DevOps
+
+- Avaliação 
+	* Prova 2
+	* Projeto de desenvolvimento*
+	* Apresentação de exercício/Artigo**
+		
+(P1 * 0,25) + (P2 * 0,25) + (Projeto * 0,25) + (Apresentação de exercício/artigo * 0,25) = média semestre
+
+___________________________________________________________________________________________________________________________________________________________
+
+Introdução
+
+- Conferência OTAN - termo utilizado pela primeira vez
+
+- Demandas além da capacidade, problemas em grandes aplicações
+
+- Área da computação destinada a insvestigar os desafios e propor soluções que permitam desenvolver sistemas de software - principalmente aqueles mais complexos e maiores
+
+Dificuldades essenciais:
+
+- Complexidade (quanto maior mais complexo)
+- Conformidade
+- Facilidade de mudanças
+- Invisibilidade
+
+O que se estuda:
+- Engenharia de requisitos / projeto de software / construção de software / testes de software / manutenção de software / Gerẽncia de configuraçãp / Gerência de processos / Processos de software...
+
+Requisitos: o que usuário e cliente demanda ter
+- funcional: o que deve ser implementado 	- não funcional: como deve operar
+
+exemplos não-funcional: desempenho, disponibilidade, capacidade, tolerância a falhas e segurança
+
+Quando a aplicação é pensada a nível de pacotes = fala-se de arquitetura
+
+Dijkstra: "Testes de software mostram a presença de bugs, mas não a sua ausência"
+
+Quem testa? (Ideal, alguém que não esteja trabalhando na construção do software)
+
+falta (fault) ou erro == defeito (IEEE)
+
+Verificação: Implementar o sistema de corretamente de acordo com os requisitos e especificações
+Validação: Implementar o sistema de forma correta, considerando o cliente
+Manutenção: Corretiva (corrigir), Preventiva (previsão de algo que pode dar errado), Adaptativa ("atualização"), Refactoring (manutenibilidade), Evolutiva (Criar novas funções)
+
+Para o software continuar útil, deve ser continuamente melhorado
+
+Exemplo de preventiva: Y2K Bug
+
+StakeHolders: qualquer pessoa interessada no projeto
+
+Modelos de desenvolvimento
+
+Prática profissional:
+Ética, certificações, regulamentação da profissõa, cursos de graduação e currículo de referência
+
+Tipos ABC de sistemas (casuais, criticos e negócios)
+
+___________________________________________________________________________________________________________________________________________________________
+
+Dia: 10/08/2026
+
+Micro-Saas
+
+“Micro-SaaS é um pequeno empreendimento de software, autofinanciado,
+administrado por um ou dois desenvolvedores e que atende a uma necessidade
+específica. Um micro-SaaS segue um modelo de serviços (Software as a Service),
+com pagamentos recorrentes (assinaturas) por parte de centenas ou alguns
+milhares de clientes”.
+
+Desafio: achar um segmento de mercado
+Pesquisa MicroConf (2020): "como você teve a ideia para o seu produto ou empresa?"
+- 45% problema que enfrentava
+- 22% problemas que seus clientes ou consumidores enfrentavam
+- 13% escolheram problemas baseado em experiências obtidas no seu trabalho diário
+- 11% amigos ou parentes estavam enfrentando o problema
+
+Outbound: você procura os clientes
+* anúncios
+* vendedores
+Inbound: o cliente descobre você
+* markenting
+* modelo freemium
+
+Custo de aquisição de clientes (propaganda/nº de novos assinantes)
+
+Receita mensal recorrente (valor das assinaturas recebidas no mês)
+
+Taxa de cancelamentos (nº de cancelamentos/total de clientes no início do mês)
+
+Valor do tempo de vida do cliente (assinatura/taxa de cancelamento)
+
+Saas viável = LTV>CAC
+	      LTV/CAC>3
+
+Net Promoter Score (NPS)
+
+Saas
+* paga-se assinatura
+* usuário ganha acesso ao sistema
+* empresa vendedora matem toda a infraestrutura
+
+Sistema gratuito: você é o produto
+
+Open Source
+- Mais desafiador para Open-Source
+Duas formas:
+- Doações de usuários
+- Prestações de serviços
+
+Definição de preço:
+- custo de desenvolvimento
+- capital disponível
+- preços praticados por sistema concorrentes
+- capacidade de pagamento dos potenciais clientes
+- valor do sistema para os clientes
+
+___________________________________________________________________________________________________________________________________________________________
+
+Data: 12/ 08/ 2026
+
+Modelos de Processo de Software (Retirado dos slides da professora Rebeca Freitas)
+
+Aula dividida em:
+
+1 Introdução
+2 Modelos Prescritivos
+  - Modelos Sequenciais
+  - Modelos Incrementais
+  - Modelos Evolucionários
+3 Métodos Ágeis
+4 Processo Unicado
+5 Considerações Finais
+6 Exercícios de Fixação
+
+Processo de software
+"Um processo dene quem está fazendo o que, quando e como paraatingir certo objetivo" (Jacobson, Booch e Rumbaugh)
+
+Papel (Quem?): Conjuntos de responsabilidades para uma pessoa ou grupo.
+
+Artefato (O quê?): O que é produzido
+
+Atividades (Como?): Unidades de trabalho executadas por um papel
+
+Disciplinas (Quando?): Um possível abordagem ao problema
+
+Fase de processo (Resultados parciais): estágio específico de desenvolvimento de um software
+
+Modelos de Processo de Software
+* Representação simplicada e abstrata do processo de software
+* Forma geral de comportamento, baseada na qual processos
+especícos podem ser denidos
+* Representa uma tentativa de colocar ordem em um processo
+inerentemente caótico
+
+Vantagens em se ter um Modelo de Processo:
+* O tempo de treinamento pode ser reduzido
+* Produtos podem ser uniformizados
+* Resultados:
+  - previsíveis
+  - gerenciáveis
+* Possibilidade de Capitalizar Experiências
+  - melhoria contínua do processo
+  - melhoria contínua do produto
+
+### Modelo Sequencial
+
+Cascata
+Sequêncial
+1º Fase: Comunicação
+2º Fase: Planejamento
+3º Fase: Modelagem
+4º Fase: Construção
+5º Fase: Implantação
+
+Só pode ir para a próxima fase, depois que já tiver terminado ou quase terminado a primeira.
+
+Contribuições:
+* organização de atividades,
+disciplina, planejamento e
+gerenciamento
+* marcos
+* documentação
+
+Problemas:
+* difícil elicitar todos os
+requisitos logo no início
+* projetos reais raramente
+seguem o fluuxo sequencial
+que o modelo propõe
+* uma versão executável do
+software só fica disponível
+após a construção
+
+Variações: V e W
+
+### Modelo Incremental
+
+Cada incremento se aumenta o escopo do sistema
+
+Rapid Application Development (RAD)
+
+### Evolucionários
+
+Contribuições
+
+- Evoluir a capacidade do sistema
+* Tratam a natureza evolutiva do software
+  - Requisitos instáveis
+  - O conteúdo funcional de um sistema deve crescer continua e progressivamente para manter a satisfação do usuário
+* Versões progressivamente mais completas:
+  - versões de funcionalidades
+  - novas funcionalidades completas
+* Mitigação de riscos
+
+- Prototipação
+- Espiral
+
+Problemas:
+* gerenciamento complexo: número incerto de ciclos
+* rápido? / lento?
+* foco principal na extensibilidade e não em qualidade
+* Prototipação:
+  - o cliente vê como uma versão denitiva
+  - o desenvolvedor faz concessões impróprias a m de colocar o protótipo em funcionamento
+
+### Métodos ágeis
+
+Manifesto ágil de 2001:
+- indivíduos e interações estão acima de processo e ferramentas
+- software funcionando está acima de documentação abrangente
+- colaboração do cliente está acima de negociação de contrato
+- responder as mudanças está acima de seguir um plano
+
+Alguns métodos:
+- Scrum
+- XP
+- Crystal (família de métodos)
+- FDD - Feature Driven Development
+- DSDM - Dynamic Systems Development Method
+- ASD - Adaptive Software Development
+
+Características em comum:
+- equipes e processos auto-ajustáveis
+- iterativo e incremental
+- orientado a cronogramas breves
+- pouca documentação
+- programação em pares
+- código coletivo
+- não orientados a ferramentas
+- desenvolvimento dirigido por testes
+
+Processo unificado: utilizar mais de um processo de forma que utilize o melhor de cada modelo
+* Dirigido por Casos de Uso
+* Baseado em componentes
+* Centrado na arquitetura
+* Iterativo e incremental
+
+Fases:
+* perspectiva dinâmica
+* estágios do desenvolvimento do software
+* cada iteração gera um artefato ou um conjunto deles (release)
+
+RUP (Rational Unified Process)
+* Risco como principal fator de determinação de iterações
+* Gerenciar requisitos
+* Modelar o software visualmente com diagramas UML
+* Controlar as mudanças
+* inclui uma base de dados com hyperlinks com vários artefatos e
+templates necessários para usar o modelo.
+
+Processo Prescritivos
++ Marcos bem
+denidos
++ Documentação
++ Atividades bem
+denidas
++ Melhor controle
+- Mudanças (em
+alguns casos)
+- Papel do cliente
+
+Processos Ágeis
++ Equipes e
+Processos
+auto-ajustáveis
++ Cliente é parte da
+equipe
+- Risco: fator
+humano
+- Documentação,
+Processos
+- Simplicação do
+gerenciamento
+
+Processo Unicado
++ Capitaliza as
+melhores
+práticas
++ Um framework
+de processos
+- Complexidade
+- Investimento em
+ferramentas
+- Exige
+experiência da
+equipe
+
+Escolha de um Modelo de Processo de Software
+* Natureza do projeto e da aplicação:
+  - Qual o tamanho do projeto?
+  - Quão bem os analistas e o cliente podem conhecer os requisitos do sistema?
+  - Quão bem é compreendida a arquitetura do sistema?
+  - Qual o grau de risco que este projeto apresenta?
+* Métodos e ferramentas a serem usados:
+  - Qual o grau de treinamento e adaptação necessários para a equipe?
+  - Será desenvolvido um único sistema ou uma família de sistemas semelhantes?
+* Controles e produtos que precisam ser entregues:
+  - Qual o grau de conabilidade necessário em relação ao cronograma?
+  - Quanto planejamento é efetivamente necessário?
