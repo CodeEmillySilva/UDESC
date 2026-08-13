@@ -199,3 +199,80 @@ Pilha cresce do mais alto para o mais baixo
 
 
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Data: 13/ 08/ 2026
+
+JVM - Introdução
+
+- Processador virtual;
+
+- Possui seu próprio conjunto de instruções
+
+- Arquiteura baseada em pilha de operandos
+
+- Responsável pela tradução e otimização do código, gerênciamento de memórias (incluindo o coletor de lixo), tratamento de exceções e gerênciamento de threads)
+
+	Fonte
+	  |
+	Compilador: análise, 
+	  |
+	Objeto
+
+Interpretador: pega um código de entrada e vai traduzindo 
+
+Dinâmica: todos os tipos são verificados na execução
+Estática: todos os tipos são verificados na compilação
+
+		Prog.java
+			|
+			javac
+			|
+		c1.class C2.class
+			|
+			java
+
+.class: arquivo objeto
+.o ou .obj: 
+
+Para executar o .class eu preciso executar a máquina virtual java
+
+Maioria dos casos casa caracter é um byte
+
+Header
+Constant pool
+Access rights
+Implemented Interfaces
+Fields
+Methods
+Class Attributes
+
+Em JAVA new é equivalente ao Malloc em C
+
+Class Ponto 
+{
+
+	public int x, y;
+
+	void setx (int a)
+	{
+		x=a;
+	}
+
+}
+
+class Aula 
+{
+	public static void main () ;
+	{
+		Ponto p1;
+		Ponto p2 = new Ponto();
+
+	}
+}
+
+Método static = não depende de nenhuma informação contida dentro da classe
+
+Frames: abstração que a máquina virtual fornece para a gente para 
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Data:
