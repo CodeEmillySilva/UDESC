@@ -164,3 +164,60 @@ Sweep
 
 
 __________________________________________________________________________________________________________________________________________________________
+
+Data: 13/ 08/ 2026
+
+OpenGL (Slides)
+
+O que é OpenGL?
+• Independente do sistema operacional e do
+hardware;
+• Projetada para aplicações gráficas interativas 2D e
+3D;
+• Controlada pelo ARB (Architecture Review
+Board):
+
+Características
+• Rapidez;
+• Portabilidade;
+• Estabilidade;
+• Excelente qualidade visual;
+• Padrão de industria;
+• Suporte para:
+– Mapeamento de texturas;
+– Iluminação;
+– Transparência;
+– Animação;
+– ...
+
+O que OpenGL faz?
+• Constrói formas a partir de objetos primitivos como
+pontos, linhas, polígonos, imagens e bitmaps;
+• Permite visualizar essas primitivas de qualquer ponto de
+um espaço tridimensional;
+• Calcula as cores dos objetos, que podem ser pré-
+definidas, determinadas por condições de iluminação,
+texturas, ou uma combinação dessas três;
+• Converte as primitivas para pixels (rasterização);
+
+O que OpenGL não faz?
+• Tarefas relacionadas a manipulação de janelas;
+• Não processa nenhuma entrada de usuário;
+• Não possui comandos de alto nível para construir
+objetos de 3 dimensões;
+• Não armazena estrutura de dados;
+
+Aspectos técnicos:
+- Primitivas: pontos, linhas, polígonos, imagens e bitmaps
+
+Apenas são não válidos polígonos simples e convexos (ângulos internos <= 180º)
+
+Curvas: devem ser aproximadas por retas
+
+Trabalho Complementar
+1) Crie um boneco de neve utilizando quádricas
+2) Modele a construção abaixo utilizando quádricas
+3) Desenhe um robô humanoide utilizando quádricas e
+garanta que ele possa ser articulado no futuro (mover
+braços, pernas,...)
+
