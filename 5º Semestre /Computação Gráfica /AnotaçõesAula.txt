@@ -221,3 +221,11 @@ Trabalho Complementar
 garanta que ele possa ser articulado no futuro (mover
 braços, pernas,...)
 
+__________________________________________________________________________________________________________________________________________________________
+
+Data: 18/ 08/ 2026
+
+Geometria: ponto, reta, retângulo, círculo, plano...
+
+Topologia: Vértices, arestas e faces.
+
