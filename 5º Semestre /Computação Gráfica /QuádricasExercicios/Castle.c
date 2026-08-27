@@ -5,6 +5,9 @@
 * Código das cores: https://pt.scribd.com/document/396245751/CodeGL-Color
 */
 
+// Compilação: gcc castle.c -lglut -lGL -lGLU -lm -o castle
+//             ./castle
+
 //Library to facilitate
 #include <GL/glut.h>
   
@@ -97,7 +100,7 @@ void RenderScene(void) {
     // Castle scene, every glPushMatrix need to have a glPopMatrix
     glPushMatrix();
 
-        glTranslatef(0.0f, -1.0f, -7.0f);
+        glTranslatef(0.0f, -1.0f, -15.0f);
 
         // Castle rotation
         glRotatef(yRot, 0.0f, 1.0f, 0.0f);
@@ -118,6 +121,32 @@ void RenderScene(void) {
 
         glPopMatrix();
 
+        //Flag Pole 1
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(+2.0f, 0.0f, +2.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.06f, 0.06f, 4.3f, 26, 10);
+
+        glPopMatrix();
+
+        // Flag 1
+
+        glColor3f(1.0f, 0.5f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(2.4f, 4.08f, 2.0f);
+            glScalef(0.8f, 0.4f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
         // Tower 2
         // Dark grey
         glColor3f(0.35f, 0.35f, 0.35f);
@@ -128,6 +157,32 @@ void RenderScene(void) {
             glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
 
             gluCylinder(pObj, 0.5f, 0.5f, 3.0f, 26, 10);
+
+        glPopMatrix();
+
+        //Flag pole 2
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 0.0f, +2.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.06f, 0.06f, 4.3f, 26, 10);
+
+        glPopMatrix();
+
+        // Flag 2
+
+        glColor3f(1.0f, 0.5f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(-1.6f, 4.08f, +2.0f);
+            glScalef(0.8f, 0.4f, 0.05f);
+
+            glutSolidCube(1.0f);
 
         glPopMatrix();
 
@@ -144,6 +199,32 @@ void RenderScene(void) {
 
         glPopMatrix();
 
+        //Flag pole 3
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 0.0f, -2.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.06f, 0.06f, 4.3f, 26, 10);
+
+        glPopMatrix();        
+
+        // Flag 3
+
+        glColor3f(1.0f, 0.5f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(-1.6f, 4.08f, -2.0f);
+            glScalef(0.8f, 0.4f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
         // Tower 4
         // Dark grey
         glColor3f(0.35f, 0.35f, 0.35f);
@@ -157,6 +238,71 @@ void RenderScene(void) {
 
         glPopMatrix();
 
+        //Flag pole 4
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(+2.0f, 0.0f, -2.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.06f, 0.06f, 4.3f, 26, 10);
+
+        glPopMatrix();
+
+        // Flag 4
+
+        glColor3f(1.0f, 0.5f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(2.4f, 4.08f, -2.0f);
+            glScalef(0.8f, 0.4f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
+        // Central Tower
+        // Dark grey
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(0.0f, 0.0f, 0.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.8f, 0.8f, 4.0f, 26, 10);
+
+        glPopMatrix();
+
+        //Flag pole Center 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(0.0f, 0.0f, 0.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.06f, 0.06f, 5.5f, 26, 10);
+
+        glPopMatrix();
+
+        // Center Flag
+
+        glColor3f(1.0f, 0.5f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(0.4f, 5.2f, 0.0f);
+            glScalef(0.8f, 0.5f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();        
+        
         // Wall 1
 
         glColor3f(0.35f, 0.35f, 0.35f);
@@ -166,6 +312,52 @@ void RenderScene(void) {
             glTranslatef(0.0f, 1.0f, 2.0f);
 
             glScalef(4.0, 2.0f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix();        
+
+        // Castle blocks 1
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-1.5f, 2.0f, 2.0f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+        
+                glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-0.5f, 2.0f, 2.0f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(0.5f, 2.0f, 2.0f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(1.5f, 2.0f, 2.0f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
             glutSolidCube(1.0f);
 
         glPopMatrix();
@@ -183,6 +375,86 @@ void RenderScene(void) {
 
         glPopMatrix();
 
+        // Castle blocks 2
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 2.0f, -1.5f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+        
+                glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 2.0f, -0.5f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 2.0f, 0.5f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 2.0f, 1.5f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
+        // Windows Wall 2
+
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 1.5f, 0.0f);
+
+            glScalef(0.8f, 0.40f, 0.5f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 1.5f, 0.9f);
+
+            glScalef(0.8f, 0.40f, 0.5f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 1.5f, -0.9f);
+
+            glScalef(0.8f, 0.40f, 0.5f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
         // Wall 3
 
         glColor3f(0.35f, 0.35f, 0.35f);
@@ -195,6 +467,86 @@ void RenderScene(void) {
             glutSolidCube(1.0f);
 
         glPopMatrix();
+
+        // Castle blocks 3
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 2.0f, -1.5f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+        
+                glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 2.0f, -0.5f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 2.0f, 0.5f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 2.0f, 1.5f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
+        // Windows Wall 3
+
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 1.5f, 0.0f);
+
+            glScalef(0.8f, 0.40f, 0.5f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 1.5f, 0.9f);
+
+            glScalef(0.8f, 0.40f, 0.5f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 1.5f, -0.9f);
+
+            glScalef(0.8f, 0.40f, 0.5f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
 
         // Wall 4
 
@@ -209,6 +561,86 @@ void RenderScene(void) {
 
         glPopMatrix();
 
+        // Castle blocks 4
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-1.5f, 2.0f, -2.0f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+        
+                glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(-0.5f, 2.0f, -2.0f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(0.5f, 2.0f, -2.0f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glColor3f(0.35f, 0.35f, 0.35f);
+
+        glPushMatrix();
+
+            glTranslatef(1.5f, 2.0f, -2.0f);
+
+            glScalef(0.5f, 0.6f, 0.5f);
+            glutSolidCube(1.0f);
+
+        glPopMatrix();        
+
+        // Windows Wall 4
+
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(0.0f, 1.5f, -2.0f);
+
+            glScalef(0.5f, 0.40f, 0.8f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glPushMatrix();
+
+            glTranslatef(1.0f, 1.5f, -2.0f);
+
+            glScalef(0.5f, 0.40f, 0.8f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
+        glPushMatrix();
+
+            glTranslatef(-1.0f, 1.5f, -2.0f);
+
+            glScalef(0.5f, 0.40f, 0.8f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix(); 
+
         // Door
         glColor3f(0.20f, 0.10f, 0.05f);
 
@@ -221,7 +653,205 @@ void RenderScene(void) {
             glutSolidCube(1.0f);
 
         glPopMatrix();
+
+        // Door handle
+
+        glColor3f(0.20f, 0.10f, 0.05f);
+
+        glPushMatrix();
+
+            glTranslatef(0.3f, 0.75f, 2.3f);
+
+            glutSolidSphere(0.07f, 18.0f, 9.0f);
+
+        glPopMatrix();
+
+        // Conical roof 1
+        // Dark grey
+        glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, +3.0f, +2.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.5f, 0.0f, 1.0f, 26, 10);
+
+        glPopMatrix();
+
+        // Conical roof 2
+        // Dark grey
+        glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, +3.0f, -2.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.5f, 0.0f, 1.0f, 26, 10);
+
+        glPopMatrix();
+
+        // Conical roof 3
+        // Dark grey
+        glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(+2.0f, +3.0f, -2.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+        gluCylinder(pObj, 0.5f, 0.0f, 1.0f, 26, 10);
+
+        glPopMatrix();
+
+        // Conical roof 4
+        // Dark grey
+        glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(+2.0f, +3.0f, +2.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.5f, 0.0f, 1.0f, 26, 10);
+
+        glPopMatrix();
+
+        // Central conical roof 
+        // Dark grey
+        glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(0.0f, +4.0f, 0.0f);
+            glRotatef(-90.0f, 1.0f, 0.0f, 0.0f);            
+
+            gluCylinder(pObj, 0.8f, 0.0f, 1.0f, 26, 10);
+
+        glPopMatrix();
+
+        // Windows - Tower 1
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 2.45f, -2.5f);
+
+            glScalef(0.20f, 0.40f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();      
         
+            glColor3f(0.0f, 0.0f, 0.0f);
+
+            glPushMatrix();
+
+            glTranslatef(2.0f, 2.5f, -1.5f);
+
+            glScalef(0.20f, 0.40f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();   
+
+        // Window - Tower 2
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 2.4f, -2.51f);
+
+            glScalef(0.20f, 0.40f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
+                glPushMatrix();
+
+            glTranslatef(-2.0f, 2.45f, -1.5f);
+
+            glScalef(0.20f, 0.40f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();   
+
+        // Window - Tower 3
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(-2.0f, 2.4f, 2.51f);
+
+            glScalef(0.20f, 0.40f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
+                glPushMatrix();
+
+            glTranslatef(-2.0f, 2.45f, 1.5f);
+
+            glScalef(0.20f, 0.40f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
+        // Window - Tower 4
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 2.4f, 2.51f);
+
+            glScalef(0.20f, 0.40f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+        
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(2.0f, 2.45f, 1.5f);
+
+            glScalef(0.20f, 0.40f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
+        // Window - Center Tower 
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(0.0f, 2.95f, 0.8f);
+
+            glScalef(0.4f, 0.6f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+        
+        glColor3f(0.0f, 0.0f, 0.0f);
+
+        glPushMatrix();
+
+            glTranslatef(0.0f, 2.95f, -0.8f);
+
+            glScalef(0.4f, 0.6f, 0.05f);
+
+            glutSolidCube(1.0f);
+
+        glPopMatrix();
+
     glPopMatrix();
 
     glutSwapBuffers();
