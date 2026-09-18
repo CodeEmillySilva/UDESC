@@ -17,7 +17,7 @@
 
 #define ESCAPE 27
 #define NUM_PARTICLES 3000
-#define FALL 0.03
+#define FALL 0.0001
 
 struct unit_particles {
 
@@ -31,8 +31,8 @@ void InitParticle (int pause) {
 
     for (int i=0; i<NUM_PARTICLES; i++) {
         particles[i].x = (float) ((rand() % 2000) / 100.0 - 8); // como é espalhado na tela
-        particles[i].y = 4.13; // de onde parte a neve
-        particles[i].veloc_y = - FALL - ((float)(rand() % 200) / 1000); //velocidade de queda
+        particles[i].y = (float) ((rand() % 2000) / 100.0 - 8);
+        particles[i].veloc_y = - FALL - ((float)(rand() % 20) / 1000); //velocidade de queda
     }
 
 }
@@ -88,9 +88,8 @@ void DrawGLScene() {
     glVertex3f( particles[i].x, particles[i].y, 0.0f);
 
     if(particles[i].y < -3.0) {
-        particles[i].x = (float) ((rand() % 2000) / 100.0 - 8); // como é espalhado na tela
-        particles[i].y = 4.13; // de onde parte a neve
-        particles[i].veloc_y = - FALL - ((float)(rand() % 200) / 1000);
+        particles[i].y = (float) ((rand() % 2000) / 100.0 - 8);
+        particles[i].veloc_y = - FALL - ((float)(rand() % 20) / 1000); 
     }
 
   }
